@@ -1,0 +1,274 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: rgba(35, 35, 35, 0.35);
+  backdrop-filter: blur(10px);
+  z-index: 50;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav li a:hover {
+  color: hwb(253 44% 0%);
+  text-decoration: underline;
+}
+
+nav img {
+  width: 32px;
+  height: 32px;
+}
+
+.hero {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-left {
+  margin-right: 120px;
+  text-align: left;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+}
+
+.hero-name {
+  color: #ff4646;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.typed {
+  color: hwb(253 44% 0%);
+  font-family: monospace;
+}
+
+.btn-wrapper {
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 12px 40px;
+  font-size: 16px;
+  border: 2px solid hwb(253 44% 0%);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: hwb(253 44% 0%);
+  color: #020202;
+}
+
+.code-card {
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.code-title {
+  padding: 8px 24px;
+  background: rgba(255, 255, 255, 0.127);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-bottom: none;
+}
+
+.code-body {
+  padding: 24px;
+  font-family: "Cascadia Code", monospace;
+  font-size: 18px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.section-title {
+  margin-top: 120px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.section-title span {
+  color: hwb(253 44% 0%);
+}
+
+.about {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.about img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+}
+
+.about p {
+  width: 35%;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.skills-desc {
+  margin: 40px auto;
+  width: 70%;
+  font-size: 18px;
+  text-align: center;
+}
+
+.skills-box {
+  margin: 0 auto;
+  width: 70%;
+  padding: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.skills-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 24px 0;
+}
+
+.skills-row img {
+  width: 80px;
+  transition: 0.3s;
+}
+
+.skills-row img:hover {
+  transform: translateY(-12px);
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 32px;
+  margin: 0 120px;
+  border-bottom: 1px solid gray;
+}
+
+.project img {
+  width: 240px;
+  height: 200px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.project img:hover {
+  transform: scale(1.05);
+}
+
+.project h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.project a {
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+  margin-right: 12px;
+}
+
+.project a:hover {
+  color: hwb(253 44% 0%);
+  border-color: hwb(253 44% 0%);
+}
+
+.contact-desc {
+  width: 70%;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  padding: 48px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+
+input, textarea {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+form button {
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid hwb(253 44% 0%);;
+  color: white;
+  cursor: pointer;
+}
+
+form button:hover 
+{
+  background: hwb(253 44% 0%);
+  color: black;
+}
+
+footer {
+  margin-top: 40px;
+  background: #232323;
+  padding: 16px;
+  text-align: center;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@200..700&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="icon" href="icons/icon1.png">
+  <title>Shreya Jolapara</title>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <img src="sj.PNG" alt="logo">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left" data-aos="fade-right">
+    <h1>
+      <span style="color:hwb(253 44% 0%)">&lt;</span>
+      Hello There
+      <span style="color:hwb(253 44% 0%)">/&gt;</span>
+    </h1>
+
+    <h1>
+      It's <span class="hero-name">Shreya Jolapara</span>
+    </h1>
+
+    <h2>
+      I'm <span id="typed-text" class="typed"></span>
+    </h2>
+
+    <div class="btn-wrapper">
+      <a href="./icons/mahek_lineswala_resume.pdf" download>
+        <button class="btn">DOWNLOAD RESUME</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="code-card" data-aos="fade-left">
+    <div class="code-title">main.java</div>
+    <div class="code-body">
+    public class Skills { <br><br>
+    public static void main(String[] args) { <br><br>
+
+      String[] Frontend = { "HTML", "CSS", "Tailwind", "JavaScript" };<br><br>
+
+      String[] Tools = { "Figma", "Photoshop", "CapCut" };<br><br>
+
+      String[] Languages = { "Python", "C", "Java" };<br><br>
+
+      System.out.println("I am an AI/ML Engineering Student");<br><br>
+    }<br><br>
+    }<br>
+  </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">
+    <span>&lt;</span> About Me <span>&gt;</span>
+  </h2>
+
+  <div class="about">
+    <img src="pfp.JPEG" alt="profile" data-aos="fade-right">
+    <p data-aos="fade-left">
+      I’m an AI & ML student and developer driven by a passion for building smart, 
+      user-friendly web applications. I work across frontend and backend using Python, 
+      focusing on clean code, modern UI, and efficient logic.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">
+    <span>&lt;</span> Skills <span>&gt;</span>
+  </h2>
+
+  <p class="skills-desc">
+    I specialize in Python, java, UI/UX design and backend.
+  </p>
+
+  <div class="skills-box">
+    <div class="skills-row">
+      <img src="html.png">
+      <img src="css.png">
+      <img src="js.png">
+      <img src="py.png">
+    </div>
+
+    <div class="skills-row">
+      <img src="java.png">
+      <img src="tail.png">
+      <img src="sql.png">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">
+    <span>&lt;</span> Contact Me <span>&gt;</span>
+  </h2>
+
+  <p class="contact-desc">
+    Let’s connect and build something amazing together.
+  </p>
+
+  <div class="contact-wrapper">
+    <div class="card">
+      <h3>Connect with me</h3><br>
+      <a href="https://github.com/Shreya-J-5"><i class="bi bi-github"></i> GitHub</a><br><br>
+      <a href="https://www.linkedin.com/in/shreya-jolapara-4b2358354/"><i class="bi bi-linkedin"></i> LinkedIn</a><br><br>
+      <a href="https://www.instagram.com/ft.shrey.a/"><i class="bi bi-instagram"></i> Instagram</a>
+    </div>
+
+    <div class="card">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_KEY">
+
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        <textarea name="message" rows="4" placeholder="Your Message"></textarea><br>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Shreya Jolapara. All rights reserved.
+</footer>
+
+<!-- JS -->
+<script>
+  AOS.init();
+</script>
+
+<script>
+  const roles = ["Frontend Developer", "Backend Developer", "Student", "Tech Explorer"];
+  let i = 0, j = 0, del = false;
+  const el = document.getElementById("typed-text");
+
+  function type() 
+  {
+    let word = roles[i];
+    el.textContent = del ? word.slice(0, --j) : word.slice(0, ++j);
+
+    if (!del && j === word.length) del = true;
+    if (del && j === 0) { del = false; i = (i + 1) % roles.length; }
+
+    setTimeout(type, del ? 80 : 120);
+  }
+  type();
+</script>
+
+</body>
+</html>
